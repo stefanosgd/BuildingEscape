@@ -20,16 +20,19 @@ void UWorldPosition::BeginPlay()
 {
 	Super::BeginPlay();
 
-	FString Log = TEXT("Hello World!");
-	FString* PtrLog = &Log;
+	// FString Log = TEXT("Hello World!");
+	// FString* PtrLog = &Log;
 	
-	Log.Len();
+	// Log.Len();
 
-	(*PtrLog).Len();
+	// (*PtrLog).Len();
 
-	PtrLog->Len();
+	// PtrLog->Len();
 
-	UE_LOG(LogTemp, Warning, TEXT("%s"), **PtrLog);
+	// UE_LOG(LogTemp, Warning, TEXT("%s"), **PtrLog);
+
+	// FString ObjectName = GetOwner()->GetName();
+	UE_LOG(LogTemp, Display, TEXT("This component is %s"), *GetOwner()->GetName());
 	
 }
 
