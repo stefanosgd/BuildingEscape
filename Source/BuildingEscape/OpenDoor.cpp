@@ -20,10 +20,11 @@ void UOpenDoor::BeginPlay()
 {
 	Super::BeginPlay();
 
-	float MyFloat = 90.f;
-
 	FRotator CurrentRotation = GetOwner()->GetActorRotation();
-	CurrentRotation
+	
+	CurrentRotation.Yaw = 90.f;
+
+	GetOwner()->SetActorRotation(CurrentRotation);
 }
 
 
